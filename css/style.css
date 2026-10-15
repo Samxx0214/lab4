@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #2b2426;
+  background-color: #f7f2ec;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.button,
+.label {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+  padding: 24px 20px;
+  background-color: #2b2426;
+  color: #f7f2ec;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #e8d5d8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.hero-grid,
+.cards-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.spotlight,
+.sidebar,
+.card {
+  background-color: #ffffff;
+  border: 1px solid #918a8c;
+}
+
+.spotlight,
+.sidebar {
+  padding: 24px 20px;
+}
+
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spotlight h1 {
+  font-size: 28px;
+}
+
+.sidebar h2 {
+  margin: 4px 0 8px;
+  font-size: 24px;
+}
+
+.sidebar p + .label {
+  margin-top: 20px;
+}
+
+.label {
+  color: #9a3f4c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #9a3f4c;
+  padding-bottom: 20px;
+}
+
+.image-placeholder {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  background-color: #e8d5d8;
+}
+
+.card h3,
+.card p,
+.card .button {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.button {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 12px 20px;
+  background-color: #9a3f4c;
+  color: #f7f2ec;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.spotlight .button {
+  margin-top: 8px;
+}
+
+.button:hover {
+  background-color: #7f3340;
+}
+
+@media (min-width: 768px) {
+  .site-header,
+  .site-footer,
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+
+  .cards-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  .spotlight,
+  .sidebar {
+    padding: 32px;
+  }
+
+  .spotlight h1 {
+    font-size: 40px;
+  }
+
+  .image-placeholder {
+    height: 180px;
+  }
+}
